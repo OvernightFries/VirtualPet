@@ -6,26 +6,43 @@ void setup()
 size(300,300);
 }
 
-public void eliCircles(){
-ellipse(155,170,100,100);
-ellipse(155,80,40,50);
+public void bodyHead(){
+ellipse(155,170,100,100); //body circle larger
+ellipse(155,170,91,91); //body circle smaller
+ellipse(155,100,40,50); //head 
 
 }
 
-public void dots(){
-  ellipse(166,80,5,5);
-  ellipse(144,80,5,5);
+public void bodyPattern(){
 }
+
+public void arms(){
+ellipse(111,120,22,60); //left arm
+ellipse(198,120,22,60); //right arm
+}
+
+public void eyes(){
+  ellipse(166,92,5,5);
+  ellipse(144,92,5,5);
+}
+
+public void tail(){
+ triangle(140,220,160,220,150,280);
+}
+
 public void mouseDraw() {
   background(204);
   line(mouseX, 20, mouseX, 80);
+  System.out.println(mouseX);
 }
 
 
 void draw(){
-eliCircles();
-dots();
+bodyHead();
+arms();
+eyes();
+tail();
+//mouseDraw();
 
 }
 
-//newcommit
